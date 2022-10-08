@@ -1,0 +1,131 @@
+/* ------------------------------------- */
+/* Left Header */
+.left_header_Bg2.animation
+{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 0px rgba(0, 0, 0, 0.034);
+}
+
+.logo.animation
+{
+    width: clamp(80px, 10vw, 130px);
+    transition: 0.5s;
+    margin-top: 0;
+}
+
+.logo1_1.animation
+{
+    width: clamp(80px, 10vw, 130px);
+    transition: 0.5s;
+    margin-top: 0;
+}
+
+.textset1_1.animation
+{
+    line-height: 100px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 19px;
+}
+
+.textset1.animation
+{
+    line-height: 100px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 19px;
+}
+
+.header.animation
+{
+    height: clamp(80px, 10vw, 110px);
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.39)
+}
+
+/* ------------------------------------- */
+/* Right Header */
+
+.whatsapp_logo.animation
+{
+    font-size: clamp(25px, 3vw, 90px);
+    width: clamp(25px, 3vw, 90px);
+    padding-right: clamp(10px, 1.5vw, 90px);
+}
+
+.whatsapp_logo.animation:hover
+{
+    font-size: clamp(28px, 3.3vw, 100px);
+    width: clamp(28px, 3.3vw, 100px);
+}
+
+.whatsapp_logo.animation:active
+{
+    font-size: clamp(25px, 3vw, 90px);
+    width: clamp(25px, 3vw, 90px);
+}
+
+.facebook_logo.animation
+{
+    font-size: clamp(25px, 3vw, 90px);
+    width: clamp(25px, 3vw, 90px);
+    padding-right: clamp(10px, 1.5vw, 90px);
+}
+
+.facebook_logo.animation:hover
+{
+    font-size: clamp(28px, 3.3vw, 100px);
+    width: clamp(28px, 3.3vw, 100px);
+}
+
+.facebook_logo.animation:active
+{
+    font-size: clamp(25px, 3vw, 90px);
+    width: clamp(25px, 3vw, 90px);
+}
+
+.instagram_logo.animation
+{
+    font-size: clamp(25px, 3vw, 90px);
+    width: clamp(25px, 3vw, 90px);
+    padding-right: clamp(10px, 1.5vw, 90px);
+}
+
+.instagram_logo.animation:hover
+{
+    font-size: clamp(28px, 3.3vw, 100px);
+    width: clamp(28px, 3.3vw, 100px);
+}
+
+.instagram_logo.animation:active
+{
+    font-size: clamp(25px, 3vw, 90px);
+    width: clamp(25px, 3vw, 90px);
+}
+
+.youtube_logo.animation
+{
+    font-size: clamp(25px, 3vw, 90px);
+    width: clamp(25px, 3vw, 90px);
+    padding-right: clamp(10px, 1.5vw, 90px);
+}
+
+.youtube_logo.animation:hover
+{
+    font-size: clamp(28px, 3.3vw, 100px);
+    width: clamp(28px, 3.3vw, 100px);
+}
+
+.youtube_logo.animation:active
+{
+    font-size: clamp(25px, 3vw, 90px);
+    width: clamp(25px, 3vw, 90px);
+}
+
+.right_block.animation
+{ 
+   margin-left: 1.5vw;
+   margin-right: 2vw;
+   transition: 0.5s;
+}
+
+/* ------------------------------------- */

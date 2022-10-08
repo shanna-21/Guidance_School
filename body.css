@@ -1,0 +1,1033 @@
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+#Overlay 
+{
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    position:fixed;
+    left:0;
+    top: 0;
+    width:100%;
+    height:100%;
+    visibility: hidden;
+    z-index: 9;
+    transition: 0.5s;
+}
+
+
+/*.showcase
+{    
+    width: 100%;
+    height: clamp(1px, 48.097vw, 700px);
+    background-position: top;
+    background-repeat: no-repeat;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-size: cover;
+    display: flex;
+}
+
+.showcase_cover
+{
+    background-color: rgba(0, 0, 0, 0.027); 
+    z-index: 1;  
+    width: 100%;
+    height: clamp(1px, 48.097vw, 700px);
+    position: absolute;
+}
+
+.showcase_div
+{
+    margin-top: 10%;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.showcase_text
+{
+    color: white;
+    font-size: 2.2rem;
+    font-weight: bold;
+    z-index: 9;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    line-height: 1.2;
+    padding-bottom: 4.4rem;
+    padding-top: 1.6rem;
+}
+
+.showcase_content
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    justify-content: center;
+    z-index: 5;
+}*/
+
+.logo2
+{
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    z-index: 9;
+    margin: 0 auto;
+    display: inline-block;
+    padding-top: 120px;
+}
+
+.bscreen
+{
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.151);
+  z-index: index;
+}
+/* ------------------------------------- */
+/* Carousel */
+.carousel
+{
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+}
+
+.carousel_images
+{
+    width: 100vw;
+    object-fit: contain;
+}
+
+.carousel_track-cont
+{
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel_track
+{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: 0;
+    transition: 1.2s;
+}
+
+.carousel_slide
+{   
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.carousel_button
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.carousel_button--left
+{
+    left: 0.7%;
+}
+
+.carousel_button--right
+{
+    right: 0.7%;
+}
+
+.carousel_button div
+{
+    font-size:  5rem;
+    color: rgba(0, 0, 0, 0.603)
+}
+
+.carousel_nav
+{
+    width: 100vw;
+    display: flex;
+    padding: 0.8rem 0;
+    justify-content: center;
+    position: absolute;
+    bottom:0;
+    transform: translateY(-50%);
+}
+
+.carousel_indicator
+{
+    border: 0;
+    width: 3rem;
+    height: 0.3rem;
+    background: rgb(189, 189, 189);
+    margin: 0 0.7rem;
+    cursor: pointer;
+}
+
+.carousel_indicator.current-slide 
+{
+    background: rgb(238, 238, 238);
+}
+/* ------------------------------------- */
+/* About Us */
+
+.icon1
+{
+    width: 3.75rem;
+    padding-top: 0.63rem;
+}
+
+.icon2
+{
+    width: 3.125rem;
+    padding-top: 0.63rem;
+}
+
+.Title1
+{
+    text-align: center;
+    width:50%;
+}
+
+.Text1
+{
+    text-align: center;
+    font-size: 0.94rem;
+    padding-left: 15%;
+    padding-right: 15%;
+    line-height: 1.5;
+    width: 70%;
+    margin: 0;
+    display: inline-block;
+}
+
+.Title2
+{
+    font-size: 1.56rem;
+    margin-bottom: 0.63rem;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 1.25rem;
+}
+
+.Text2
+{
+    text-align: center;
+    font-size: 0.94rem;
+    padding-left: 15%;
+    padding-right: 15%;
+    line-height: 1.5;
+    width: 70%;
+    margin: 0;
+    display: inline-block;
+}
+
+.center_div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about
+{
+    padding-top: 3.75rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.88rem;
+    margin-right: 1.88rem;
+}
+
+.Student_Contain
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 15.625rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.Student_Bg
+{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.44rem;
+    color: white;
+    height: 15.63rem;
+    width: 15.63rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: lightpink;
+    border-radius: 62.5rem;
+}
+
+.VBM_cont
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    column-gap: 1.25rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    width: 87vw;
+    margin-top: 1.125rem;
+}
+
+.Vision
+{
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: no-repeat;
+    background-size: 87vw auto;
+    background-position: left;
+    height: 35rem;
+    width: 1fr;
+}
+
+.Mission
+{
+    background-color: rgba(240, 248, 255, 0);
+    background-repeat: no-repeat;
+    background-size: 87vw auto;
+    background-position: center;
+    height: 35rem;
+    width: 1fr;
+}
+
+.Budaya
+{
+    background-color: rgba(240, 248, 255, 0);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 87vw auto;
+    height: 35rem;
+    width: 1fr;
+}
+
+.V_Cover
+{
+    background-color: rgba(187, 187, 70, 0.39); 
+    z-index: 1;  
+    width: 100%;    
+    height: 35rem;
+    transition: 0.5s;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.M_Cover
+{
+    background-color: rgba(255, 182, 193, 0.39); 
+    z-index: 1;  
+    width: 100%;    
+    height: 35rem;
+    transition: 0.5s;
+    font-size: 1rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.B_Cover
+{
+    background-color: rgba(32, 178, 171, 0.39); 
+    z-index: 1;  
+    width: 100%;    
+    height: 35rem;
+    transition: 0.5s;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.VBM_title
+{
+    font-family:'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.VBM_text
+{
+    font-family:'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    text-align: justify;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    max-height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.VBM_text_block
+{
+    width: 0%;
+    height: 0.2rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.V_Cover:hover .VBM_text_block
+{
+    width: 95%;
+    transition: 0.5s;
+}
+
+.M_Cover:hover .VBM_text_block
+{
+    width: 95%;
+    transition: 0.5s;
+}
+
+.B_Cover:hover .VBM_text_block
+{
+    width: 95%;
+    transition: 0.5s;
+}
+
+.V_Cover:hover .VBM_text
+{
+    max-height: 100%;
+    visibility: visible;
+    transition: 0.5s;
+    padding-bottom: 0.75rem;
+}
+
+.M_Cover:hover .VBM_text
+{
+    max-height: 100%;
+    visibility: visible;
+    transition: 0.5s;
+    padding-bottom: 0.75rem;
+}
+
+.B_Cover:hover .VBM_text
+{
+    max-height: 100%;
+    visibility: visible;
+    transition: 0.5s;
+    padding-bottom: 0.75rem;
+}
+
+.VBM_cover
+{
+    background-color: rgba(0, 0, 0, 0.377); 
+    z-index: -1;  
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.V_Cover:hover .VBM_cover
+{
+    opacity: 1;
+}
+
+.B_Cover:hover .VBM_cover
+{
+    opacity: 1;
+}
+
+.M_Cover:hover .VBM_cover
+{
+    opacity: 1;
+}
+
+/* ------------------------------------- */
+/* Facility */
+.facility
+{
+    margin-top: 3.125rem;
+    width: 100%;
+    display: flex;
+}
+
+.facility_bg
+{
+    width: 100%;
+    background-color: rgb(138, 186, 211);
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+    padding-bottom: 1rem;
+    align-items: center;
+}
+
+.Our_Facility
+{
+    color: white;
+    padding-top: 1.25rem;
+    font-size: 1.56rem;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.FA_Wblock
+{
+    height: 0.313rem; 
+    width: 25rem; 
+    margin: auto;
+    margin-top: 0.625rem;
+    background-color: white;
+}
+
+.FA_Cimage
+{
+    height: 100%;
+    width: 100%;
+    margin-top: 1.56rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.FA_img1
+{
+    height: 100%;
+    width: 100%;  
+    object-fit: cover;
+}
+
+.FA_bottom_text
+{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    bottom: 0.313rem;
+    left: 1.125rem;
+    color: white;
+    font-size: 1.563rem;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.FA_cover
+{
+    background-color: rgba(0, 0, 0, 0.158); 
+    z-index: 1;  
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.FA_wrap
+{
+    z-index: 5; 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.FA_wrap:hover ~ .FA_bottom_text > .FA_bottom_desc
+{
+    max-height: 12.5rem;
+    visibility: visible;
+    transition: 0.5s;
+    padding-bottom: 0.75rem;
+}
+
+.FA_wrap:hover ~ .FA_cover  
+{
+    background-color: rgba(0, 0, 0, 0.507);
+}
+
+.FA_bottom_desc
+{
+    font-family:'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.94rem;
+    margin-top: 0.1875rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 0.94rem;
+    max-height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+/* ------------------------------------- */
+/* Facility Border Animation*/
+
+.FA_wrap::before
+{   
+    content: "";
+    position: absolute;
+    border-top: 0.125rem solid white;
+    border-bottom: 0.125rem solid white;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    transform: scale(0,1);
+    transition: transform ease-out 0.5s;
+}
+
+.FA_wrap:hover::before
+{
+    transform: scale(1,1);
+}
+
+.FA_wrap::after
+{   
+    content: "";
+    position: absolute;
+    border-left: 0.125rem solid white;
+    border-right: 0.125rem solid white;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    transform: scale(1,0);
+    transition: transform ease-out 0.5s;
+}
+
+.FA_wrap:hover::after
+{
+    transform: scale(1,1);
+}
+
+/* ------------------------------------- */
+/* Classes */
+
+.List_of_Classes
+{
+    margin-top: 3.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;    
+}
+
+.Classes_Heading
+{
+    font-size: 1.563rem;
+    font-weight: bold;
+    color: rgb(78, 78, 78);
+    margin-bottom: 0.63rem;
+}
+
+.Classes_Container
+{
+    width: 100%;
+    height: 28.13rem;
+    margin-top: 1.563rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.Classes_Cover
+{
+    background-color: rgba(102, 140, 150, 0.5); 
+    z-index: 1;  
+    width: 100%;    
+    height: 100%;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.Classes_Text_Title
+{
+    font-size: 1.563rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.Classes_Text_Desc
+{
+    font-family:'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.94rem;
+    color: rgb(255, 255, 255);
+    max-height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.Classes_Text_Block
+{
+    height: 0.3125rem;
+    width: 0%;
+    background-color: white;
+    margin-top: 0.1875rem;
+    margin-bottom: 0.625rem;
+    transition: 0.5s;
+}
+
+.Classes_wrap
+{
+    background-color: rgba(0, 0, 0, 0); 
+    z-index: 5;  
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.Classes_Cover:hover .Classes_Text_Desc
+{
+    max-height: 100px;
+    visibility: visible;
+    transition: 0.5s;
+}
+
+.Classes_Cover:hover .Classes_Text_Block
+{
+    width: 50%;
+}
+
+.Classes_Cover:hover
+{
+    background-color: rgba(73, 100, 107, 0.603); 
+}
+
+/* ------------------------------------- */
+/* Apply */
+
+.Apply_Now
+{
+    text-decoration: none;
+    width: 100%;
+    height: 15.625rem;
+    margin-top: 3.125rem;
+    background-color: rgb(255, 255, 116);
+    display: flex;
+}
+
+.Apply_Now_Container
+{
+    width: 100%;
+    height: calc(100% - 1.25rem);
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+    margin-top: 0.63rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.Apply_Block
+{
+    background-color: white;
+    height: 0.3rem;
+    width: 22%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.Apply_Text_Container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Apply_Text_Title
+{
+    font-size: 1.563rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.Apply_Text_Desc
+{
+    font-family:'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 0.437rem;
+    font-size: 1.25rem;
+    color: white;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.Apply_Button {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-flex;
+    fill: rgb(255, 255, 255);
+    font-family: Inter,sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    height: 3rem;
+    justify-content: center;
+    letter-spacing: -0.05rem;
+    line-height: 1.5rem;
+    min-width: 8.75rem;
+    outline: 0;
+    padding: 0 1.063rem;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.Apply_Button:hover {
+    border-color: rgb(0, 102, 255);
+    color: rgb(0, 102, 255);
+    fill: rgb(0, 102, 255);
+}
+
+.Apply_Button:active {
+    background-color: rgb(0, 102, 255);
+    border-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    fill: rgb(255, 255, 255);
+}
+
+.Credit
+{
+    width: 100%;
+    height: 14.375rem;
+    margin-top: 3.125rem;
+    background-color: rgb(255, 255, 116);
+    display: flex;
+}
+
+.Credit_Container
+{
+    width: 100%;
+    height: calc(100% - 1.25rem);
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+    Margin-top: 0.94rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.Credit_Block
+{
+    background-color: white;
+    height: 90%;
+    width: 0.3125rem;
+    margin-left: 0.9375rem;
+}
+
+.Credit_Block2
+{
+    background-color: white;
+    height: 100%;
+    width: 0.3125rem;
+    margin-left: 0.9375rem;
+}
+
+.Credit_Text_Container
+{
+    width: 80%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 10fr 1fr 10fr;
+    text-align: center;
+}
+
+.Credit_Text_Container2
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Credit_Text_Title
+{
+    font-size: 1.563rem;
+    font-weight: bold;
+    color: rgb(94, 94, 94); 
+    margin-bottom: 0.438rem;
+    border-style: solid;
+    border-color: rgb(94, 94, 94);
+    border-width: 0.1875rem;
+    padding-right: 0.3125rem;
+    padding-left: 0.3125rem;
+}
+
+.Credit_Text_Desc
+{
+    font-family:'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 0.4375rem;
+    font-size: 1.25rem;
+    color: rgb(94, 94, 94);
+    text-align: center;
+}
+
+.Google_Maps
+{
+    display: flex; 
+    width: 100%;
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+    margin-top: 0.625rem;
+    margin-bottom: 1.25rem;
+}
+
+.Visit_Us
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+    margin-top: 1.875rem;
+}
+
+.VisitUs_Text_Title
+{
+    font-size: 1.5625rem;
+    font-weight: bold;
+    color: rgb(94, 94, 94); 
+    margin-bottom: 0.4375rem;
+}

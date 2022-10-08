@@ -1,0 +1,369 @@
+/* General */
+body
+{
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0;
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+}
+
+/* changes by Ricky  */
+
+.small-icon
+{
+   font-size: 0.7em;
+   
+}
+
+.wa-color
+{
+   color: rgb(88, 173, 88);
+}
+
+.fb-color
+{
+   color: lightblue;
+}
+
+.ig-color
+{
+   color: rgb(255, 85, 218);
+}
+
+.yt-color
+{
+   color: rgb(255, 89, 89);
+}
+
+.Menu
+{
+  font-size: 1.7em !important;
+}
+
+/* end of changes */
+
+
+
+
+/* ------------------------------------- */
+/* Main Header */
+
+.header
+{
+   height: clamp(100px, 15vw, 140px);
+   width: cal(100vw - 17px);
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 8;
+   transition: 0.5s;
+   border: none;  
+}
+
+/* ------------------------------------- */
+/* Left Header */
+
+.left_header
+{
+   display: flex;
+   align-items: center;
+   height: 100%;
+   background-color: rgba(255, 255, 255, 0);
+   opacity: 1;
+   z-index: 10;
+}
+
+.left_header_Bg1
+{
+   width: 100%;
+   position: absolute;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0);
+   z-index: 8;
+   transition: 0.5s;
+}
+
+.left_header_Bg2
+{
+   width: 100%;
+   position: absolute;
+   height: 100%;
+   background-color: white;
+   z-index: 8;
+   transition: 0.5s;
+}
+
+.logo
+{
+   width: clamp(50px, 15vw, 140px);
+   height: 100%;
+   margin-left: 5vw;
+   margin-top: 0.5vw;
+   display: flex; 
+   align-items: center;
+   justify-content: center;
+   transition: 0.5s;
+}
+
+.logo1_1
+{
+   width: clamp(50px, 15vw, 140px);
+   transition: 0.5s;
+}
+
+.textset1_1
+{
+   float: left;
+   height: 100%;
+   text-align: center;
+   align-items: center;
+   line-height: 10vw;
+   vertical-align: middle;
+   position: relative;
+   padding-left: clamp(0.7rem, 2.2vw , 3.6rem);
+   padding-right: clamp(0.7rem, 2.2vw , 3.6rem);
+   font-size: clamp(0.7rem, 2vw , 3.6rem);
+   transition: 0.5s;
+   text-decoration: none; 
+   color: black;
+}
+
+.textset1
+{
+   float: left;
+   height: 100%;
+   text-align: center;
+   align-items: center;
+   line-height: 10vw;
+   vertical-align: middle;
+   position: relative;
+   padding-left: clamp(0.7rem, 2vw , 3.6rem);
+   padding-right: clamp(0.7rem, 2vw , 3.6rem);
+   font-size: clamp(0.7rem, 2vw , 3.6rem);
+   transition: 0.5s;
+   text-decoration: none; 
+   color: black;
+}
+
+.textset1:hover
+{
+   background-color: rgba(0, 0, 0, 0.219);
+}
+
+.textset1_1:hover
+{
+   background-color: rgba(0, 0, 0, 0.219);
+}
+
+.textset1_1:active
+{
+   background-color: rgba(0, 0, 0, 0.397);
+}
+
+.textset1:active
+{
+   background-color: rgba(0, 0, 0, 0.397);
+}
+
+/* ------------------------------------- */
+/* Right Header */
+
+.right_header
+{
+   display: flex;
+   height: 100%;
+   width: 40%;
+   z-index: 10;
+   background-color: rgba(255, 166, 0, 0);
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+
+.whatsapp_logo
+{
+   font-size: 3.8vw;
+   width: 3.8vw;
+   padding-right: 1.5vw;
+   transition: 0.5s;
+}
+
+.whatsapp_logo1
+{
+   width: 100%;
+   padding-right: 2vw;
+   transition: 0.5s;
+}
+
+.whatsapp_logo:hover
+{
+   font-size: 4.5vw;
+   width: 4.5vw;
+   transition: 0.5s;
+}
+
+.whatsapp_logo:active
+{
+   width: 3.8vw;
+}
+
+.facebook_logo
+{
+   font-size: 3.8vw;
+   width: 3.8vw;
+   padding-right: 2vw;
+   transition: 0.5s;
+}
+
+.facebook_logo1
+{
+   width: 100%;
+   padding-right: 2vw;
+   transition: 0.5s;
+}
+
+.facebook_logo:hover
+{
+   font-size: 4.5vw;
+   width: 4.5vw;
+}
+
+.facebook_logo:active
+{
+   width: 3.8vw;
+}
+
+.instagram_logo
+{
+   font-size: 3.8vw;
+   width: 3.8vw;
+   padding-right: 2vw;
+   transition: 0.5s;
+}
+
+.instagram_logo1
+{
+   width: 100%;
+   padding-right: 2vw;
+   transition: 0.5s;
+}
+
+.instagram_logo:hover
+{
+   font-size: 4.5vw;
+   width: 4.5vw;
+}
+
+.instagram_logo:active
+{
+   width: 3.8vw;
+}
+
+.youtube_logo
+{
+   font-size: 3.8vw;
+   width: 3.8vw;
+   padding-right: 2vw;
+   transition: 0.5s;
+}
+
+.youtube_logo1
+{
+   width: 100%;
+   padding-right: 2vw;
+   transition: 0.5s;
+}
+
+.youtube_logo:hover
+{
+   font-size: 4.5vw;
+   width: 4.5vw;
+}
+
+.youtube_logo:active
+{
+   width: 3.8vw;
+}
+
+.Menu
+{
+   padding-top: 10%;
+   cursor: pointer;
+}
+
+.Menu:hover 
+{
+   transform: scale(1.1);
+}
+
+.Menu:active
+{
+   transform: scale(1);
+}
+/* ------------------------------------- */
+/* Ekstra */
+
+.zero_margin
+{
+   margin: 0 0 0 0;
+}
+
+.right_block
+{
+   height: 100%; 
+   width: 0.3vw; 
+   background-color: crimson; 
+   margin-left: 2vw;
+   margin-right: 2.5vw;
+   transition: 0.5s;
+}
+
+/* ------------------------------------- */
+/* Side_Nav */
+
+.sidenav {
+   height: 100%;
+   width: 0;
+   position: fixed;
+   top: 0;
+   right: 0;
+   background-color: #111;
+   overflow-x: hidden;
+   transition: 0.5s;
+   padding-top: 60px;
+   z-index: 100;
+ }
+ 
+ .sidenav a {
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #818181;
+   display: block;
+   transition: 0.3s;
+ }
+ 
+ .sidenav a:hover {
+   color: #f1f1f1;
+ }
+ 
+ .sidenav .closebtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+ }
+ 
+ @media screen and (max-height: 450px) {
+   .sidenav {padding-top: 15px;}
+   .sidenav a {font-size: 18px;}
+ }
+
+/* ------------------------------------- */
+ 
